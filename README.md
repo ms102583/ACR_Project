@@ -31,17 +31,26 @@ pip install -r requirements.txt
 
 ### 1. Run on Local Device (No Networking)
 ```bash
-python local_environment.py
+python local_environment.py --video videos.mp4
 ```
 
 ### 2. Run Client on Raspberry Pi
 ```bash
-python client.py
+python client.py --video videos.mp4
+```
+### 2-1. For Client_only
+```bash
+python client_only.py --video videos.mp4 --movinet_res out.txt
 ```
 
 ### 3. Run Server on GPU Machine
 ```bash
-python server.py
+python server.py --video videos.mp4
+```
+
+### 3-1. For Server_only
+```
+python server_only.py --video videos.mp4 --movinet_res out.txt
 ```
 
 Ensure the client and server are reachable over the network and that firewalls do not block required ports.
