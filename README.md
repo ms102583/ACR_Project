@@ -21,11 +21,7 @@ The codebase has been **tested on Ubuntu 20.04 with Python 3.8.10**.
 - Ubuntu 20.04 (or compatible Linux OS)
 - GPU (for running the server with Transformer-based genre classification)
 
-You can install dependencies via:
-
-```bash
-pip install -r requirements.txt
-```
+You can install dependencies via: requirements.txt
 
 ## ⚙️ Usage
 
