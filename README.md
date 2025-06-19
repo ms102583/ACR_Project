@@ -25,3 +25,28 @@ You can install dependencies via:
 
 ```bash
 pip install -r requirements.txt
+```
+
+## ⚙️ Usage
+
+### 1. Run on Local Device (No Networking)
+```bash
+python local_environment.py
+```
+
+### 2. Run Client on Raspberry Pi
+```bash
+python client.py
+```
+
+### 3. Run Server on GPU Machine
+```bash
+python server.py
+```
+
+Ensure the client and server are reachable over the network and that firewalls do not block required ports.
+
+## 📌 Notes
+
+- For systems where PaddleOCR causes segmentation faults on ARM-based devices (e.g., Raspberry Pi), we **offload OCR to the server**.
+- For environments where network communication is restricted (e.g., blocked ports), use `client_only.py` and `server_only.py` for testing.
