@@ -51,6 +51,25 @@ python server_only.py --video videos.mp4 --movinet_res out.txt
 
 Ensure the client and server are reachable over the network and that firewalls do not block required ports.
 
+
+## 📊 Sample Output & Visualization
+
+When running the pipeline, the system generates frame-wise genre scores like the following:
+
+```
+[Genre] news (scores: {'news': 0.94, 'drama': 0.02, 'documentary': 0.01, 'sports': 0.005, ... })
+```
+
+For each video, the system aggregates genre probabilities across all frames and selects the genre with the highest cumulative score as the final prediction. For example, if "news" has consistently the highest probability across frames, the system predicts the video as a news content.
+
+The figure below shows a **radar chart** of the average genre scores over multiple frames. It visually represents the relative confidence of the model in each genre category:
+
+![Average Genre Scores Radar Chart](radar_chart_example.png)
+
+- A larger radius toward a genre (e.g., `news`, `sports`) indicates higher model confidence.
+- Flattened or small regions (e.g., `comedy`, `cooking`) indicate lower relevance for that content.
+- This chart helps diagnose genre ambiguity and visualize how well the model distinguishes between types of content.
+- 
 ## 📌 Notes
 
 - For systems where PaddleOCR causes segmentation faults on ARM-based devices (e.g., Raspberry Pi), we **offload OCR to the server**.
