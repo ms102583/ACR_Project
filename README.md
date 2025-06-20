@@ -38,7 +38,7 @@ This ACR system uses:
 
 You can install dependencies via: requirements.txt
 
-### GStreamer + tflite install
+### GStreamer + tflite install(for Ubuntu 20.04)
 ```bash
 sudo add-apt-repository ppa:nnstreamer/ppa
 sudo apt-get update
