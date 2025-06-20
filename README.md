@@ -69,7 +69,7 @@ The figure below shows a **radar chart** of the average genre scores over multip
 - A larger radius toward a genre (e.g., `news`, `sports`) indicates higher model confidence.
 - Flattened or small regions (e.g., `comedy`, `cooking`) indicate lower relevance for that content.
 - This chart helps diagnose genre ambiguity and visualize how well the model distinguishes between types of content.
-- 
+  
 ## 📌 Notes
 
 - For systems where PaddleOCR causes segmentation faults on ARM-based devices (e.g., Raspberry Pi), we **offload OCR to the server**.
