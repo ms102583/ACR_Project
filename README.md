@@ -95,8 +95,23 @@ The figure below shows a **radar chart** of the average genre scores over multip
 - A larger radius toward a genre (e.g., `news`, `sports`) indicates higher model confidence.
 - Flattened or small regions (e.g., `comedy`, `cooking`) indicate lower relevance for that content.
 - This chart helps diagnose genre ambiguity and visualize how well the model distinguishes between types of content.
+
+## 🔍 Evaluation
+
+To evaluate:
+1. Prepare a folder of test videos (e.g., recorded from YouTube).
+2. Run project code on each video.
+3. Aggregate genre probabilities across frames and select the highest-scoring genre.
+4. Compare with human-annotated genre labels for F1-score.
+
+Evaluation Result:
+- F1 Score: **70%** (14/20 videos matched human intuition)
+- Using only MoViNet: 25%
+- Using only OCR: 55%
+- Highest accuracy observed in news and sports categories.
   
 ## 📌 Notes
 
 - For systems where PaddleOCR causes segmentation faults on ARM-based devices (e.g., Raspberry Pi), we **offload OCR to the server**.
 - For environments where network communication is restricted (e.g., blocked ports), use `client_only.py` and `server_only.py` for testing.
+- Ensure server has access to GPU with CUDA for HuggingFace model performance.
