@@ -4,6 +4,21 @@ This repository contains the implementation of a **Multimodal Automatic Content 
 
 The codebase has been **tested on Ubuntu 20.04 with Python 3.8.10**.
 
+## 🚀 What This Project Does
+
+Imagine watching a cooking show or a sports broadcast. This pipeline can:
+- Detect **what people are doing** (e.g., skiing, clapping)
+- Read **on-screen text or subtitles**
+- Automatically classify the **video genre** (e.g., news, drama, sports, etc.)
+- Provide **real-time spoken feedback** of the predicted genre
+
+This ACR system uses:
+- **MoViNet (TFLite)** for lightweight action recognition on Raspberry Pi
+- **PaddleOCR** for scene text extraction (server side)
+- **BART (HuggingFace)** for zero-shot genre classification
+- **gTTS + GStreamer** for voice output
+
+---
 ## 📁 Repository Structure
 
 | File | Description |
