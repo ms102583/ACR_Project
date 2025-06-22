@@ -19,7 +19,7 @@ import tflite_runtime.interpreter as tflite
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
-MOVINET_MODEL = "models/movinet-int8.tflite"
+MOVINET_MODEL = "models/movinet.tflite"
 SERVER_URL    = "http://<SERVER_IP>:8000/ocr_genre"   # ★ 서버 주소만 바꾸세요
 with open("labels.txt") as f:
     label_map = [ln.strip() for ln in f]
