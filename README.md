@@ -104,8 +104,8 @@ To evaluate:
 3. Aggregate genre probabilities across frames and select the highest-scoring genre.
 4. Compare with human-annotated genre labels for F1-score.
 
-Evaluation Result:
-- F1 Score: **70%** (14/20 videos matched human intuition)
+Evaluation Result using 20 videos:
+- F1 Score: **70%**
 - Using only MoViNet: 25%
 - Using only OCR: 55%
 - Highest accuracy observed in news and sports categories.
